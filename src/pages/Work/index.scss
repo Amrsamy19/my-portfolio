@@ -31,7 +31,7 @@
 .work__item {
 	padding: 1.3rem;
 	border-radius: 2rem;
-	width: 100%;
+	width: fit-content;
 	border: 1px solid transparent;
 	background: var(--color-bg-variant);
 	transition: var(--transition);
@@ -56,6 +56,12 @@
 	.overlay {
 		.work__items {
 			padding: 0 1rem;
+		}
+
+		.work__item {
+			p {
+				height: fit-content;
+			}
 		}
 	}
 }
