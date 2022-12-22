@@ -4,7 +4,6 @@ import { AnimatePresence } from "framer-motion";
 import MainLayout from "../../layout/MainLayout";
 import Home from "../../pages/Home";
 import About from "../../pages/About";
-import Experience from "../../pages/Experience";
 import Work from "../../pages/Work";
 import Contact from "../../pages/Contact";
 
@@ -17,7 +16,6 @@ function AnimatedRoutes() {
 				<Route path="/" element={<MainLayout />}>
 					<Route index element={<Home />} />
 					<Route path="about" element={<About />} />
-					<Route path="experience" element={<Experience />} />
 					<Route path="projects" element={<Work />} />
 					<Route path="contact" element={<Contact />} />
 				</Route>

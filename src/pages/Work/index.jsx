@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-
+import { m, LazyMotion, domAnimation } from "framer-motion";
 import "./index.scss";
 
 const PROJECTS = [
@@ -45,50 +44,55 @@ const PROJECTS = [
 
 const Work = () => {
 	return (
-		<motion.section
-			className="work__container"
-			initial={{ opacity: 0 }}
-			animate={{
-				width: "90%",
-				opacity: 1,
-				transition: { delay: 0.5, duration: 1.2 },
-			}}
-			exit={{ x: window.innerWidth, transition: { delay: 0.5, duration: 0.5 } }}
-		>
-			<h5>My Recent Projects</h5>
-			<h2>Projects</h2>
+		<LazyMotion features={domAnimation}>
+			<m.section
+				initial={{ opacity: 0 }}
+				animate={{
+					width: "70%",
+					opacity: 1,
+					transition: { delay: 0.5, duration: 1.2 },
+				}}
+				exit={{
+					x: window.innerWidth,
+					transition: { delay: 0.5, duration: 0.5 },
+				}}
+				className="work__container"
+			>
+				<h5>My Recent Projects</h5>
+				<h2>Projects</h2>
 
-			<div className="work__items">
-				{PROJECTS.map((project) => {
-					return (
-						<article className="work__item">
-							<h3>{project.title}</h3>
-							<p className="text-light">{project.description}</p>
-							<div className="work__item__cta">
-								<a
-									href={project.repo}
-									className="btn"
-									target="_blank"
-									rel="noreferrer"
-								>
-									Github
-								</a>
-								<a
-									href={project.link !== "" ? project.link : ""}
-									className={
-										project.link !== "" ? "btn btn-primary" : "btn-hidden"
-									}
-									target="_blank"
-									rel="noreferrer"
-								>
-									Live Demo
-								</a>
-							</div>
-						</article>
-					);
-				})}
-			</div>
-		</motion.section>
+				<div className="work__items">
+					{PROJECTS.map((project) => {
+						return (
+							<article className="work__item">
+								<h3>{project.title}</h3>
+								<p className="text-light">{project.description}</p>
+								<div className="work__item__cta">
+									<a
+										href={project.repo}
+										className="btn"
+										target="_blank"
+										rel="noreferrer"
+									>
+										Github
+									</a>
+									<a
+										href={project.link !== "" ? project.link : ""}
+										className={
+											project.link !== "" ? "btn btn-primary" : "btn-hidden"
+										}
+										target="_blank"
+										rel="noreferrer"
+									>
+										Live Demo
+									</a>
+								</div>
+							</article>
+						);
+					})}
+				</div>
+			</m.section>
+		</LazyMotion>
 	);
 };
 

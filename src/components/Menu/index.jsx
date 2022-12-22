@@ -20,9 +20,6 @@ function Menu({ active, setActive }) {
 				<Link to="/about">About</Link>
 			</li>
 			<li>
-				<Link to="/experience">Experience</Link>
-			</li>
-			<li>
 				<Link to="/projects">My Projects</Link>
 			</li>
 			<li>
