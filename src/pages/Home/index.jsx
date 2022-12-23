@@ -20,11 +20,15 @@ const Home = () => {
 				}}
 			>
 				<div className="header__container">
-					<div className="typing-intro">
-						<h5>Hello I'm</h5>
+					<div className="name">
+						<p className="text-primary">Hello I'm</p>
 						<h1>Amr Samy</h1>
-						<h5 className="text-light">Front End Web Developer</h5>
+						<h2 className="text-light">Front End Web Developer</h2>
 					</div>
+					<p className="intro text-light">
+						Building websites can be a challenge, but I am up for any challenge
+						as it will make learn new technologies.
+					</p>
 					<CTA />
 					<Socials />
 				</div>

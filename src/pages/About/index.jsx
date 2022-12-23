@@ -1,5 +1,3 @@
-import { FaAward } from "react-icons/fa";
-import { VscFolderOpened } from "react-icons/vsc";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 
 import ME from "../../assets/me-about.jpg";
@@ -31,27 +29,33 @@ const About = () => {
 					</div>
 
 					<div className="about__content">
-						<div className="about__cards">
-							<article className="about__card">
-								<FaAward className="about__icon" />
-								<h5>Experience</h5>
-								<small>1+ Years Working</small>
-							</article>
-
-							<article className="about__card">
-								<VscFolderOpened className="about__icon" />
-								<h5>Projects</h5>
-								<small>10+ Projects</small>
-							</article>
-						</div>
 						<p>
 							I am a Front-End Web Developer born and raised in Cairo, Egypt. I
-							have a serious passion for UI interactions, animations and
+							graduated from
+							<a href="https://cu.edu.eg/Home" target="_blank">
+								{" "}
+								Cairo University
+							</a>{" "}
+							and have a serious passion for UI interactions, animations and
 							creating intuitive and dynamic user experiences.
-							<br />
-							<br />I am a well-organised person, problem solver and cooperative
+						</p>
+
+						<p>
+							I am a well-organised person, problem solver and cooperative
 							person with high attention to detail. Fan of English literature
 							and online gaming.
+						</p>
+
+						<p>
+							Here are a few technologies I've been working with recently:
+							<ul className="about__technologies">
+								<li>JavaScript (ES6+)</li>
+								<li>TypeScript</li>
+								<li>React</li>
+								<li>Node.js</li>
+								<li>Tailwind CSS</li>
+								<li>HTML & (S)CSS</li>
+							</ul>
 						</p>
 						<a href="/contact" className="btn btn-primary">
 							Let's Talk

@@ -1,12 +1,11 @@
 .about__container {
-	padding: 0 5rem;
 	display: grid;
-	grid-template-columns: 45% 58%;
-	gap: 10%;
+	grid-template-columns: 45% 60%;
+	gap: 8%;
 }
 
 .about__me {
-	width: 100%;
+	width: 75%;
 	aspect-ratio: 1/1;
 	border-radius: 2rem;
 	background: linear-gradient(
@@ -29,47 +28,28 @@
 	}
 }
 
-.about__cards {
-	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	gap: 1.5rem;
-}
-
-.about__card {
-	background: var(--color-bg-variant);
-	border: 1px solid transparent;
-	border-radius: 1rem;
-	padding: 2rem;
-	text-align: center;
-	transition: var(--transition);
-
-	&:hover {
-		border: 3px solid var(--color-primary-variant);
-	}
-
-	h5 {
-		font-size: 0.95rem;
-	}
-
-	small {
-		font-size: 0.7rem;
-		color: var(--color-light);
-	}
-}
-
-.about__icon {
-	color: var(--color-primary);
-	font-size: 1.4rem;
-	margin-bottom: 1rem;
-}
-
 .about__content {
-	width: fit-content;
+	width: 80%;
 
 	p {
-		margin: 2rem 0 2.6rem;
+		margin: 1.5rem 0 2rem;
 		color: var(--color-light);
+	}
+
+	.about__technologies {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 10px;
+		list-style: none;
+
+		li::before {
+			color: var(--color-primary);
+			content: "\2022";
+			font-size: 1.4rem;
+			display: inline-block;
+			width: 1.5rem;
+			margin-left: 0.2rem;
+		}
 	}
 }
 
@@ -84,21 +64,19 @@
 
 		.about__container {
 			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-			margin: 0 auto;
 		}
 
 		.about__me {
-			width: 100%;
-		}
-
-		.about__card {
-			padding: 1rem 0;
+			margin: 0 auto;
+			width: 80%;
 		}
 
 		.about__content {
+			margin: 0 auto;
+
 			p {
 				padding: 0;
-				margin: 2rem 0 2rem 0;
+				margin: 1rem 0;
 			}
 
 			.btn {

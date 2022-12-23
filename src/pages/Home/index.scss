@@ -8,27 +8,19 @@ header {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
 
-	.typing-intro {
-		width: 35%;
-		animation: typing 2s steps(22) 0.8s, blink 0.5s step-end infinite alternate;
-		white-space: nowrap;
-		overflow: hidden;
-		border-right: 3px solid;
+	.name {
+		width: 80%;
+	}
+
+	.intro {
+		width: 80%;
 	}
 }
 
-@keyframes typing {
-	from {
-		width: 0;
-	}
-}
-
-@keyframes blink {
-	50% {
-		border-color: transparent;
-	}
+.text-primary {
+	font-size: 1.5rem;
+	color: var(--color-primary);
 }
 
 /* ******************* CTA ******************* */
@@ -51,8 +43,6 @@ header {
 
 @media screen and (max-width: 600px) {
 	.header__container {
-		.typing-intro {
-			width: 300px;
-		}
+		width: 100%;
 	}
 }
