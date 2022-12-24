@@ -1,6 +1,6 @@
 import { m, LazyMotion, domAnimation } from "framer-motion";
 
-import ME from "../../assets/me-about.jpg";
+import ME from "../../assets/me-about.webp";
 import "./index.scss";
 
 const About = () => {

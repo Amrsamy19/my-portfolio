@@ -8,7 +8,7 @@ function App() {
 	const [isLoading, setIsLoading] = useState(true);
 
 	const dummyRequest = () => {
-		return new Promise((resolve) => setTimeout(() => resolve(), 2000));
+		return new Promise((resolve) => setTimeout(() => resolve(), 1000));
 	};
 
 	useEffect(() => {
