@@ -9,7 +9,7 @@ const About = () => {
 			<m.section
 				initial={{ opacity: 0 }}
 				animate={{
-					width: "70%",
+					width: "90%",
 					opacity: 1,
 					transition: { delay: 0.5, duration: 1.2 },
 				}}
@@ -57,9 +57,11 @@ const About = () => {
 								<li>HTML & (S)CSS</li>
 							</ul>
 						</p>
-						<a href="/contact" className="btn btn-primary">
-							Let's Talk
-						</a>
+						<div className="btn__container">
+							<a href="/contact" className="btn btn-primary">
+								Let's Talk
+							</a>
+						</div>
 					</div>
 				</div>
 			</m.section>
